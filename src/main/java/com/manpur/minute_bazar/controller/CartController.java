@@ -22,7 +22,6 @@ public class CartController {
 
     @GetMapping("/{userId}")
     public Cart getCart(@PathVariable long userId) {
-        System.out.println("vishal" + userId);
         return cartService.getCartByUserId(userId);
     }
 }

@@ -24,7 +24,7 @@ public class OrderDetailsController {
         return service.getOrderById(id);
     }
 
-    @GetMapping
+    @GetMapping("/orderAll")
     public List<OrderDetailsResponse> getAllOrders() {
         return service.getAllOrders();
     }
