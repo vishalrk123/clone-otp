@@ -28,13 +28,13 @@ public class CheckoutServiceImpl implements CheckoutService {
         List<ItemAvailabilityResponse> itemAvailabilityList = new ArrayList<>();
         for(ItemAvailabilityRequest itemAvailabilityRequest : request.getItemsAvailabilityRequest()) {
             Inventory inventory = inventoryRepository.findByProductId(itemAvailabilityRequest.getProductId());
-            if(inventory.getStockQuantity() < itemAvailabilityRequest.getQuantityBuy()) {
-                itemAvailabilityList.add(ItemAvailabilityResponse.builder()
-                        .availableQuantity(inventory.getStockQuantity())
-                        .inStock(false)
-                        .productId(inventory.getProductId())
-                        .build());
-            }
+//            if(inventory.getStockQuantity() < itemAvailabilityRequest.getQuantityBuy()) {
+//                itemAvailabilityList.add(ItemAvailabilityResponse.builder()
+//                        .availableQuantity(inventory.getStockQuantity())
+//                        .inStock(false)
+//                        .productId(inventory.getProductId())
+//                        .build());
+//            }
         }
 
         return ItemsAvailabilityResponse.builder()
