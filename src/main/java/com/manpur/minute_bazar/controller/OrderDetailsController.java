@@ -19,7 +19,7 @@ public class OrderDetailsController {
         return service.createOrder(request);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/search/{id}")
     public OrderDetailsResponse getOrderById(@PathVariable Long id) {
         return service.getOrderById(id);
     }

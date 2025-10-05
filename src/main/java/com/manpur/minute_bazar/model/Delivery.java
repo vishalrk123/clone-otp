@@ -4,19 +4,21 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "deliveries")
 @Getter
 @Setter
-@ToString
-@RequiredArgsConstructor
-@Builder
+@NoArgsConstructor
 @AllArgsConstructor
-public class User {
+@Builder
+public class Delivery {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String phoneNumber;
-    private String password;
+    private String orderId;
+
+    private String otp;
+
+    private boolean confirmed;
 }

@@ -11,14 +11,15 @@ public class UserConvertor {
     public User convertTo(UserRequest userRequest) {
         return User.builder()
                 .name(userRequest.getName())
-                .email(userRequest.getEmail())
+                .phoneNumber(userRequest.getPhoneNumber())
                 .build();
     }
 
     public UserResponse convertFrom(User user) {
         return UserResponse.builder()
+                .id(user.getId())
                 .name(user.getName())
-                .email(user.getEmail())
+                .phoneNumber(user.getPhoneNumber())
                 .build();
     }
 }
